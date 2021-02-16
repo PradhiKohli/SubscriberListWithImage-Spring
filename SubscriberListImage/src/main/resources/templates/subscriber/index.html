@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en" >
+<head>
+    <title>Subscriber List</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!--</head>-->
+
+<!--<body>-->
+
+<!--&lt;!&ndash; navbar &ndash;&gt;-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <title>Bootstrap Example</title>-->
+<!--    <meta charset="utf-8">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">SubscriberListSite</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#"> Hello </a></li>
+<!--            <li><a href="#">Page 2</a></li>-->
+<!--            <li><a href="#">Page 3</a></li>-->
+        </ul>
+    </div>
+</nav>
+
+
+
+<!--<nav class="navbar navbar-expand-lg fixed-top ">-->
+<!--    <a class="navbar-brand" href="#">Home</a>-->
+<!--    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--        <span class="navbar-toggler-icon"></span>-->
+<!--    </button>-->
+<!--    <div class="collapse navbar-collapse " id="navbarSupportedContent">     <ul class="navbar-nav mr-4">-->
+<!--        <li class="nav-item">-->
+<!--            <a class="nav-link" data-value="about" href="#">About</a>        </li>-->
+
+<!--    </ul>-->
+<!--    </div></nav>-->
+<img src="sub.jpg" alt="subsciber" style="max-width:100%;height:auto;">
+<h1>Welcome to Our Awesome Site!</h1>
+<h3>Subscribe to our List. Sign-up below!</h3>
+<p>Please use the form below to sign up as a subscriber: </p>
+<form action="#" th:action="@{/}" th:object="${subscriber}" method="post">
+    <table>
+
+        <tr>
+            <td>First Name:</td>
+            <td><input type="text" th:field="*{firstName}" /> </td>
+        </tr>
+        <tr>
+            <td>Last Name:</td>
+            <td><input type="text" th:field="*{lastName}" /> </td>
+        </tr>
+        <tr>
+            <td>Username:</td>
+            <td><input type="text" th:field="*{userName}" /> </td>
+        </tr>
+        <tr>
+            <td><button type="submit">Submit Your Name</button></td>
+        </tr>
+
+    </table>
+</form>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+</body>
+</html>
